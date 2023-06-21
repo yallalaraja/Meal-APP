@@ -1,71 +1,126 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
-body{
-    width: 100%;
-    background-color:lightcyan !important; 
-    color: darkgreen !important;
+
+body {
+  width: 100%;
+  background-color: rgb(242, 250, 9) !important;
+  color: darkgreen !important;
 }
+
 /* Heading Section */
 #heading {
-    margin-top: 100px;
+  margin-top: 100px;
 }
-/*Navigation Section */
+
+/* Navigation Section */
 #nav {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
+
 /* Search Bar */
 #search-bar {
-    max-width: 600px;
+  max-width: 550px;
 }
+
 #search-bar input {
-    height: 50px;
-    border-radius: 20px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: whitesmoke;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 /* Meal Container */
 #card {
-    background-color: powderblue;
-    padding: 10px;
-    color:darkmagenta;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #fb1bd5;
+  padding: 10px;
+  color: rgb(231, 234, 237);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+  animation: fadeIn 1s ease-in-out;
+  transition: transform 0.3s ease;
 }
+
+#card:hover {
+  background-color: #fb1bd5;
+  padding: 0px;
+  margin: 10px auto;
+  color: #10f19b;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+  animation: fadeIn 1s ease-in-out;
+  transform: scale(1.1);
+}
+
+
 #card img {
-    border-radius: 50%;
+  border-radius: 50%;
 }
+
 /* More meal details */
-#meal-details{
-    width: 100%;
-    padding: 20px;
-    border-radius: 20px;
-    background-color:lavenderblush ;
-    color:mediumpurple
+#meal-details {
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: lavenderblush;
+  color: mediumpurple;
 }
-#meal-header{
-    width: 70%;
-    margin: auto;
+
+#meal-header {
+  width: 70%;
+  margin: auto;
 }
-#meal-thumbail img{
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
+
+#meal-thumbail img {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
 }
-#details{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-style: italic;
+
+#details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
 }
-#meal-instruction{
-    margin: auto;
-    text-align: center;
-    color:darkolivegreen;
+
+#meal-instruction {
+  margin: auto;
+  text-align: center;
+  color: darkolivegreen;
 }
+
 /* Favourites Section */
-#favourites-body{
-    background-color:lightcyan ;
+#favourites-body {
+  background-color: #a03240;
+}
+
+/* Animations */
+
+/* Fading in the meal container */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Rotating animation for navbar brand image */
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.navbar-brand img {
+  animation: rotateAnimation 2.5s infinite linear;
 }

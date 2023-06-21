@@ -11,7 +11,8 @@ async function fetchMealsFromApi(url,value) {
 function showMealList(){
     let inputName = document.getElementById("my-search").value;
     let arr=JSON.parse(localStorage.getItem("favouritesList"));
-    let url="https://www.themealdb.com/api/json/v1/1/search.php?s="; //api url
+    // let url="https://www.themealdb.com/api/json/v1/1/search.php?s="; //api url
+    let url = "https://api-ninjas.com/api/recipe.com/api/json/v1/1/search.php?q=";
     let html = "";
     let meals=fetchMealsFromApi(url,inputName);
     //Meal search from api 
@@ -27,7 +28,7 @@ function showMealList(){
                 //if meal is in favourite list then it shows red heart button
                 if (isFav) {
                     html += `
-                    <div id="card" class="card mb-3" style="width: 20rem;">
+                    <div id="card" class="card mb-3" style="width: 15rem;">
                     <img src="${element.strMealThumb}" class="card-img-top" alt="...">
                     <div class="card-body">
                     <h5 class="card-title">${element.strMeal}</h5>
@@ -41,7 +42,7 @@ function showMealList(){
                     //if meal is not in favourite list then it shows white heart button
                 } else {
                     html += `
-                    <div id="card" class="card mb-3" style="width: 20rem;">
+                    <div id="card" class="card mb-3" style="width: 15rem;">
                     <img src="${element.strMealThumb}" class="card-img-top" alt="...">
                     <div class="card-body">
                     <h5 class="card-title">${element.strMeal}</h5>
@@ -61,7 +62,7 @@ function showMealList(){
             <div class="container">
             <div class="row justify-content-center">
             <div class="col-md-12 text-center">
-            <span class="display-1 d-block">404 Error</span>
+            <span class="display-1 d-block">Not Found</span>
             <div class="mb-4 lead">
             SORRY! No meal found.
             </div>
