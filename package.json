@@ -1,0 +1,20 @@
+{
+  "name": "meal-app",
+  "version": "1.0.0",
+  "description": "A mini meal app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yallalaraja/Meal-APP.git"
+  },
+  "author": "Raja Reddy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yallalaraja/Meal-APP/issues"
+  },
+  "homepage": "https://github.com/yallalaraja/Meal-APP#readme"
+}
