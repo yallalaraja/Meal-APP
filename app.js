@@ -11,8 +11,7 @@ async function fetchMealsFromApi(url,value) {
 function showMealList(){
     let inputName = document.getElementById("my-search").value;
     let arr=JSON.parse(localStorage.getItem("favouritesList"));
-    // let url="https://www.themealdb.com/api/json/v1/1/search.php?s="; //api url
-    let url = "https://api-ninjas.com/api/recipe.com/api/json/v1/1/search.php?q=";
+    let url="https://www.themealdb.com/api/json/v1/1/search.php?s="; //api url
     let html = "";
     let meals=fetchMealsFromApi(url,inputName);
     //Meal search from api 
